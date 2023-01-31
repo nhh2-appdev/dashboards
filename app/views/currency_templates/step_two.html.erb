@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      
+    </head>
+
+    <body>
+
+      <h1>Convert <%= @requested %></h1>
+      <p>Go <a href = "/forex">back</a>.</P>
+      
+      <ul>
+        <% @array_of_symbols.each do |a_symbol| %>
+          <li>
+            <a href="/forex/<%= @requested %>/<%=a_symbol%>">
+              Convert 1 <%= @requested %> to <%= a_symbol %>...
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    </body>
+
+  </html>

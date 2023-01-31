@@ -7,4 +7,10 @@ Rails.application.routes.draw do
 # Define the "/forex" URL route
   get("/forex", { :controller => "currencies", :action => "first_currency"})
 
+# Define the "/forex/wildcard" URL route
+  get("/forex/:first_currency", { :controller => "currencies", :action => "input_one"})
+
+# Define the "/forex/:first_currency/wildcard" URL route
+  get("/forex/:first_currency/:second_currency", { :controller => "currencies", :action => "input_two"})
+
 end
