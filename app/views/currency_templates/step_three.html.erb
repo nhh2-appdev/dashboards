@@ -1,17 +1,13 @@
 <!DOCTYPE html>
   <html>
-    <head>
-      
-    </head>
 
     <body>
 
       <h1>Convert <%= @requested %> to <%= @second_requested %></h1>
 
-      <p>1 <%= @requested %> equals <%= @second_requested %>.</p>
+      <p>1 <%= @requested %> equals <%= @info.to_f %> <%= @second_requested %>.</p>
 
       <p>Go <a href = "/forex/<%= @requested %>">back</a>.</p>
-      
 
     </body>
     
